@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-      <link rel="icon" href="/pngwing.com.png" />
+        <link rel="icon" href="/pngwing.com.png" />
+        <link href="https://fonts.cdnfonts.com/css/ocr-a-std" rel="stylesheet" />
         <title>{metadata.title as string}</title>
-<meta name="description" content={metadata.description as string} />
-
+        <meta name="description" content={metadata.description as string} />
       </Head>
       <body className={inter.className}>{children}</body>
     </html>

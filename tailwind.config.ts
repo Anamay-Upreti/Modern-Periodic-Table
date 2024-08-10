@@ -13,8 +13,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        ocr: ['ocr-a-std', 'monospace'],
+        // Define the custom font family
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
