@@ -1,14 +1,14 @@
 import Elements from "@/components/Elements";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
-
 
 export default function Home() {
   return (
     <>
-   <Navbar/>
-   
-   <Elements/>
-   </>
+      <Navbar />
+      {/* Added padding to the top to ensure Elements doesn't overlap with the Navbar */}
+      <div className="pt-24 md:pt-28">
+        <Elements />
+      </div>
+    </>
   );
 }
