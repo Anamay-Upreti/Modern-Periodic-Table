@@ -12,7 +12,7 @@ const elements = [
   { symbol: 'F', name: 'Fluorine', colStart: 17, rowStart: 2, group: 'halogen' },
   { symbol: 'Ne', name: 'Neon', colStart: 18, rowStart: 2, group: 'noble-gas' },
 
-  { symbol: 'Na', name: 'Sodium', colStart: 1, rowStart: 3 },
+  { symbol: 'Na', name: 'Sodium', colStart: 1, rowStart: 3 , group: 'alkali-metal' },
   { symbol: 'Mg', name: 'Magnesium', colStart: 2, rowStart: 3 },
   { symbol: 'Al', name: 'Aluminum', colStart: 13, rowStart: 3 },
   { symbol: 'Si', name: 'Silicon', colStart: 14, rowStart: 3 },
@@ -21,7 +21,7 @@ const elements = [
   { symbol: 'Cl', name: 'Chlorine', colStart: 17, rowStart: 3 },
   { symbol: 'Ar', name: 'Argon', colStart: 18, rowStart: 3 },
 
-  { symbol: 'K', name: 'Potassium', colStart: 1, rowStart: 4 },
+  { symbol: 'K', name: 'Potassium', colStart: 1, rowStart: 4, group: 'alkali-metal' },
   { symbol: 'Ca', name: 'Calcium', colStart: 2, rowStart: 4 },
   { symbol: 'Sc', name: 'Scandium', colStart: 3, rowStart: 4 },
   { symbol: 'Ti', name: 'Titanium', colStart: 4, rowStart: 4 },
@@ -40,7 +40,7 @@ const elements = [
   { symbol: 'Br', name: 'Bromine', colStart: 17, rowStart: 4 },
   { symbol: 'Kr', name: 'Krypton', colStart: 18, rowStart: 4 },
 
-  { symbol: 'Rb', name: 'Rubidium', colStart: 1, rowStart: 5 },
+  { symbol: 'Rb', name: 'Rubidium', colStart: 1, rowStart: 5 , group: 'alkali-metal'},
   { symbol: 'Sr', name: 'Strontium', colStart: 2, rowStart: 5 },
   { symbol: 'Y', name: 'Yttrium', colStart: 3, rowStart: 5 },
   { symbol: 'Zr', name: 'Zirconium', colStart: 4, rowStart: 5 },
@@ -59,7 +59,7 @@ const elements = [
   { symbol: 'I', name: 'Iodine', colStart: 17, rowStart: 5 },
   { symbol: 'Xe', name: 'Xenon', colStart: 18, rowStart: 5 },
 
-  { symbol: 'Cs', name: 'Cesium', colStart: 1, rowStart: 6 },
+  { symbol: 'Cs', name: 'Cesium', colStart: 1, rowStart: 6 , group: 'alkali-metal'},
   { symbol: 'Ba', name: 'Barium', colStart: 2, rowStart: 6 },
   
   { symbol: 'La', name: 'Lanthanum', colStart: 3, rowStart: 6 }, // Lanthanides start here
@@ -94,7 +94,7 @@ const elements = [
   { symbol: 'At', name: 'Astatine', colStart: 17, rowStart: 6 },
   { symbol: 'Rn', name: 'Radon', colStart: 18, rowStart: 6 },
 
-  { symbol: 'Fr', name: 'Francium', colStart: 1, rowStart: 7 },
+  { symbol: 'Fr', name: 'Francium', colStart: 1, rowStart: 7 , group: 'alkali-metal'},
   { symbol: 'Ra', name: 'Radium', colStart: 2, rowStart: 7 },
   { symbol: 'Ac', name: 'Actinium', colStart: 3, rowStart: 7 }, // Actinides start here
   { symbol: 'Th', name: 'Thorium', colStart: 4, rowStart: 10 },
