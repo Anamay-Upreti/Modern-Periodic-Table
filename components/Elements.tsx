@@ -1,16 +1,16 @@
 import React from 'react';
 
 const elements = [
-  { symbol: 'H', name: 'Hydrogen', colStart: 1, rowStart: 1 },
-  { symbol: 'He', name: 'Helium', colStart: 18, rowStart: 1 },
-  { symbol: 'Li', name: 'Lithium', colStart: 1, rowStart: 2 },
-  { symbol: 'Be', name: 'Beryllium', colStart: 2, rowStart: 2 },
-  { symbol: 'B', name: 'Boron', colStart: 13, rowStart: 2 },
-  { symbol: 'C', name: 'Carbon', colStart: 14, rowStart: 2 },
-  { symbol: 'N', name: 'Nitrogen', colStart: 15, rowStart: 2 },
-  { symbol: 'O', name: 'Oxygen', colStart: 16, rowStart: 2 },
-  { symbol: 'F', name: 'Fluorine', colStart: 17, rowStart: 2 },
-  { symbol: 'Ne', name: 'Neon', colStart: 18, rowStart: 2 },
+  { symbol: 'H', name: 'Hydrogen', colStart: 1, rowStart: 1, group: 'nonmetal' },
+  { symbol: 'He', name: 'Helium', colStart: 18, rowStart: 1, group: 'noble-gas' },
+  { symbol: 'Li', name: 'Lithium', colStart: 1, rowStart: 2, group: 'alkali-metal' },
+  { symbol: 'Be', name: 'Beryllium', colStart: 2, rowStart: 2, group: 'alkaline-earth-metal' },
+  { symbol: 'B', name: 'Boron', colStart: 13, rowStart: 2, group: 'metalloid' },
+  { symbol: 'C', name: 'Carbon', colStart: 14, rowStart: 2, group: 'nonmetal' },
+  { symbol: 'N', name: 'Nitrogen', colStart: 15, rowStart: 2, group: 'nonmetal' },
+  { symbol: 'O', name: 'Oxygen', colStart: 16, rowStart: 2, group: 'nonmetal' },
+  { symbol: 'F', name: 'Fluorine', colStart: 17, rowStart: 2, group: 'halogen' },
+  { symbol: 'Ne', name: 'Neon', colStart: 18, rowStart: 2, group: 'noble-gas' },
 
   { symbol: 'Na', name: 'Sodium', colStart: 1, rowStart: 3 },
   { symbol: 'Mg', name: 'Magnesium', colStart: 2, rowStart: 3 },
@@ -61,7 +61,8 @@ const elements = [
 
   { symbol: 'Cs', name: 'Cesium', colStart: 1, rowStart: 6 },
   { symbol: 'Ba', name: 'Barium', colStart: 2, rowStart: 6 },
-  { symbol: 'La', name: 'Lanthanum', colStart: 3, rowStart: 9 }, // Lanthanides start here
+  
+  { symbol: 'La', name: 'Lanthanum', colStart: 3, rowStart: 6 }, // Lanthanides start here
   { symbol: 'Ce', name: 'Cerium', colStart: 4, rowStart: 9 },
   { symbol: 'Pr', name: 'Praseodymium', colStart: 5, rowStart: 9 },
   { symbol: 'Nd', name: 'Neodymium', colStart: 6, rowStart: 9 },
@@ -95,7 +96,7 @@ const elements = [
 
   { symbol: 'Fr', name: 'Francium', colStart: 1, rowStart: 7 },
   { symbol: 'Ra', name: 'Radium', colStart: 2, rowStart: 7 },
-  { symbol: 'Ac', name: 'Actinium', colStart: 3, rowStart: 10 }, // Actinides start here
+  { symbol: 'Ac', name: 'Actinium', colStart: 3, rowStart: 7 }, // Actinides start here
   { symbol: 'Th', name: 'Thorium', colStart: 4, rowStart: 10 },
   { symbol: 'Pa', name: 'Protactinium', colStart: 5, rowStart: 10 },
   { symbol: 'U', name: 'Uranium', colStart: 6, rowStart: 10 },
@@ -127,6 +128,20 @@ const elements = [
   { symbol: 'Ts', name: 'Tennessine', colStart: 17, rowStart: 7 },
   { symbol: 'Og', name: 'Oganesson', colStart: 18, rowStart: 7 },
 ];
+
+const groupColors = {
+  'alkali-metal': 'bg-red-200 text-red-800',
+  'alkaline-earth-metal': 'bg-orange-200 text-orange-800',
+  'transition-metal': 'bg-yellow-200 text-yellow-800',
+  'metalloid': 'bg-green-200 text-green-800',
+  'nonmetal': 'bg-blue-200 text-blue-800',
+  'halogen': 'bg-indigo-200 text-indigo-800',
+  'noble-gas': 'bg-purple-200 text-purple-800',
+  'lanthanide': 'bg-pink-200 text-pink-800',
+  'actinide': 'bg-teal-200 text-teal-800',
+  'post-transition-metal': 'bg-gray-200 text-gray-800',
+  'unknown': 'bg-gray-100 text-gray-600'
+};
 
 const Elements = () => {
   return (
