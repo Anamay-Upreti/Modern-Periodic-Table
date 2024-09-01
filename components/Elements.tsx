@@ -145,15 +145,15 @@ const groupColors = {
 
 const Elements = () => {
   return (
-    <div className="grid grid-cols-18 gap-2 p-4">
+    <div className="grid grid-cols-18 sm:grid-cols-9 md:grid-cols-12 lg:grid-cols-18 gap-1 p-1 overflow-hidden max-w-full">
       {elements.map((element) => (
         <div
           key={element.symbol}
-          className="p-4 border text-center"
+          className={`p-2 border text-center ${groupColors[element.group] || 'bg-gray-100'}`}
           style={{ gridColumnStart: element.colStart, gridRowStart: element.rowStart }}
         >
-          <div className="text-xl font-bold">{element.symbol}</div>
-          <div className="text-sm">{element.name}</div>
+          <div className="text-sm md:text-base lg:text-lg font-bold">{element.symbol}</div>
+          <div className="text-xs md:text-sm lg:text-base">{element.name}</div>
         </div>
       ))}
     </div>
