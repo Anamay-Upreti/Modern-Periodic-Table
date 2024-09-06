@@ -95,7 +95,7 @@ const elements = [
   { symbol: 'Rn', name: 'Radon', colStart: 18, rowStart: 6 },
 
   { symbol: 'Fr', name: 'Francium', colStart: 1, rowStart: 7 , group: 'alkali-metal'},
-  { symbol: 'Ra', name: 'Radium', colStart: 2, rowStart: 7 },
+  { symbol: 'Ra', name: 'Radium', colStart: 2, rowStart: 7,  },
   { symbol: 'Ac', name: 'Actinium', colStart: 3, rowStart: 7 }, // Actinides start here
   { symbol: 'Th', name: 'Thorium', colStart: 4, rowStart: 10 },
   { symbol: 'Pa', name: 'Protactinium', colStart: 5, rowStart: 10 },
@@ -149,7 +149,7 @@ const Elements = () => {
       {elements.map((element) => (
         <div
           key={element.symbol}
-          className={`p-2 border text-center ${groupColors[element.group] || 'bg-gray-100'}`}
+          className={`p-2 border text-center ${groupColors[element.group] || groupColors['unknown']}`}
           style={{ gridColumnStart: element.colStart, gridRowStart: element.rowStart }}
         >
           <div className="text-sm md:text-base lg:text-lg font-bold">{element.symbol}</div>
