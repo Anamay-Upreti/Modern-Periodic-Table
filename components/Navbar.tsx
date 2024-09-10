@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { PiPlay } from 'react-icons/pi';
+import Reactions from './Reactions';
 
 const Navbar = () => {
   return (
@@ -10,13 +11,13 @@ const Navbar = () => {
 
         {/* List Items with Text Glow Effect */}
         <li className="text-orange-500 cursor-pointer hover:text-orange-300 hover:scale-105 transition-transform">
-          Home
+          <Link href="/">Home</Link>
         </li>
         <li className="text-orange-500 cursor-pointer hover:text-orange-300 hover:scale-105 transition-transform">
-          Reaction
+          <Link href="/reactions">Reaction</Link>  {/* Add Link here */}
         </li>
         <li className="text-orange-500 cursor-pointer hover:text-orange-300 hover:scale-105 transition-transform">
-          Make-Table
+          <Link href="/make-table">Make-Table</Link>
         </li>
 
         {/* Buttons with Glowing Hover Effect */}
