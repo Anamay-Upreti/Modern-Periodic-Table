@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -10,15 +10,22 @@ const Reactions = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-      <motion.h1 className="text-5xl font-bold mb-8">Chemical Reactions Game</motion.h1>
+      <motion.h1 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-5xl font-bold mb-12"
+      >
+        Chemical Reactions Game
+      </motion.h1>
 
-      <div className="grid grid-cols-2 gap-8 mb-8">
-        {/* Compound 1 Selector with Accessible Name */}
-        <div>
-          <label htmlFor="compound1" className="text-2xl mb-2">Select Compound 1</label>
+      <div className="grid grid-cols-2 gap-16 mb-8">
+        {/* Compound 1 Selector */}
+        <div className="flex flex-col items-center">
+          <label htmlFor="compound1" className="text-2xl mb-4">Select Compound 1</label>
           <select
             id="compound1"
-            className="bg-gray-200 text-black p-2 rounded"
+            className="bg-white text-black p-3 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
             value={compound1 || ''}
             onChange={(e) => setCompound1(e.target.value)}
             aria-label="Select Compound 1"
@@ -32,12 +39,12 @@ const Reactions = () => {
           </select>
         </div>
 
-        {/* Compound 2 Selector with Accessible Name */}
-        <div>
-          <label htmlFor="compound2" className="text-2xl mb-2">Select Compound 2</label>
+        {/* Compound 2 Selector */}
+        <div className="flex flex-col items-center">
+          <label htmlFor="compound2" className="text-2xl mb-4">Select Compound 2</label>
           <select
             id="compound2"
-            className="bg-gray-200 text-black p-2 rounded"
+            className="bg-white text-black p-3 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
             value={compound2 || ''}
             onChange={(e) => setCompound2(e.target.value)}
             aria-label="Select Compound 2"
@@ -52,7 +59,12 @@ const Reactions = () => {
         </div>
       </div>
 
-      <motion.button className="bg-orange-500 py-2 px-4 rounded-lg">React!</motion.button>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        className="bg-orange-500 py-2 px-6 rounded-lg shadow-lg hover:bg-orange-400 hover:shadow-xl transition-all duration-300"
+      >
+        React!
+      </motion.button>
     </div>
   );
 };
