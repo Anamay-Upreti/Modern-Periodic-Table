@@ -1,7 +1,7 @@
 "use client";
 
-import Link from 'next/link';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -16,8 +16,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log('Form submitted:', formData);
+    // Handle login logic here
+    console.log('Logging in with:', formData);
   };
 
   return (
@@ -36,7 +36,7 @@ const Login = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="mt-1 block w-full p-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-[#002240] focus:ring-opacity-50"
+              className="mt-1 block w-full p-3 bg-gray-100 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#002240] focus:ring-opacity-50"
               required
             />
           </div>
@@ -51,7 +51,7 @@ const Login = () => {
               name="password"
               value={formData.password}
               onChange={handleInputChange}
-              className="mt-1 block w-full p-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-[#002240] focus:ring-opacity-50"
+              className="mt-1 block w-full p-3 bg-gray-100 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#002240] focus:ring-opacity-50"
               required
             />
           </div>

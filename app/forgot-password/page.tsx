@@ -53,13 +53,13 @@ const ForgotPassword = () => {
               <label htmlFor="email" className="block text-gray-700 text-sm font-medium">
                 Email
               </label>
-              <input
+              <input 
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="mt-1 block w-full p-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-[#002240] focus:ring-opacity-50"
+                className="mt-1 block w-full p-3 bg-gray-100 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#002240] focus:ring-opacity-50"
                 required
               />
             </div>
@@ -75,7 +75,7 @@ const ForgotPassword = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="mt-1 block w-full p-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-[#002240] focus:ring-opacity-50"
+                className="mt-1 block w-full p-3 bg-gray-100 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#002240] focus:ring-opacity-50"
                 required
               />
             </div>
