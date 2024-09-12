@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { PiPlay } from 'react-icons/pi';
-import Reactions from './Reactions';
+
 
 const Navbar = () => {
   return (
