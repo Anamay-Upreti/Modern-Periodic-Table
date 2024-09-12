@@ -24,9 +24,13 @@ const Navbar = () => {
         <button className="flex text-white text-2xl bg-orange-500 w-28 h-10 text-center items-center justify-center rounded-full hover:bg-orange-400 hover:shadow-md transition-shadow">
           Play <PiPlay className="ml-2" />
         </button>
-        <button className="flex text-white text-xl bg-orange-500 w-28 h-10 text-center items-center justify-center rounded-full hover:bg-orange-400 hover:shadow-md transition-shadow">
-          Register
-        </button>
+
+        {/* Register Button with Link to Registration Page */}
+        <Link href="/register">
+          <button className="flex text-white text-xl bg-orange-500 w-28 h-10 text-center items-center justify-center rounded-full hover:bg-orange-400 hover:shadow-md transition-shadow">
+            Register
+          </button>
+        </Link>
       </ul>
     </nav>
   );
