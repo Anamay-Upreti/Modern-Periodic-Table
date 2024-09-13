@@ -149,7 +149,7 @@ const Elements = () => {
       {elements.map((element) => (
         <div
           key={element.symbol}
-          className={`p-2 border text-center ${groupColors[element.group] || groupColors['unknown']}`}
+          className={`p-2 border text-center ${groupColors[element.group] || groupColors['unknown']} w-[80px] h-[80px]`}
           style={{ gridColumnStart: element.colStart, gridRowStart: element.rowStart }}
         >
           <div className="text-sm md:text-base lg:text-lg font-bold">{element.symbol}</div>
