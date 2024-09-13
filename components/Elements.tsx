@@ -149,11 +149,11 @@ const Elements = () => {
       {elements.map((element) => (
         <div
           key={element.symbol}
-          className={`p-2 border text-center ${groupColors[element.group] || groupColors['unknown']} w-[80px] h-[80px]`}
-          style={{ gridColumnStart: element.colStart, gridRowStart: element.rowStart }}
+          className={`flex flex-col justify-center items-center p-2 border ${groupColors[element.group] || groupColors['unknown']}`}
+          style={{ gridColumnStart: element.colStart, gridRowStart: element.rowStart, height: '80px', width: '80px' }}  // Set equal height and width for all boxes
         >
           <div className="text-sm md:text-base lg:text-lg font-bold">{element.symbol}</div>
-          <div className="text-xs md:text-sm lg:text-base">{element.name}</div>
+          
         </div>
       ))}
     </div>
