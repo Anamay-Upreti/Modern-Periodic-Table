@@ -1,3 +1,4 @@
+import { group } from 'console';
 import React from 'react';
 
 const elements = [
@@ -14,10 +15,10 @@ const elements = [
 
   { symbol: 'Na', name: 'Sodium', colStart: 1, rowStart: 3 , group: 'alkali-metal' },
   { symbol: 'Mg', name: 'Magnesium', colStart: 2, rowStart: 3 , group: 'alkaline-earth-metal' },
-  { symbol: 'Al', name: 'Aluminum', colStart: 13, rowStart: 3 , group: 'metalloid'},
-  { symbol: 'Si', name: 'Silicon', colStart: 14, rowStart: 3 },
-  { symbol: 'P', name: 'Phosphorus', colStart: 15, rowStart: 3 },
-  { symbol: 'S', name: 'Sulfur', colStart: 16, rowStart: 3 },
+  { symbol: 'Al', name: 'Aluminum', colStart: 13, rowStart: 3 , group: 'post-transition-metal'},
+  { symbol: 'Si', name: 'Silicon', colStart: 14, rowStart: 3 , group: 'metalloid'},
+  { symbol: 'P', name: 'Phosphorus', colStart: 15, rowStart: 3 , group: 'nonmetal'},
+  { symbol: 'S', name: 'Sulfur', colStart: 16, rowStart: 3, group: 'nonmetal' },
   { symbol: 'Cl', name: 'Chlorine', colStart: 17, rowStart: 3 , group: 'halogen'},
   { symbol: 'Ar', name: 'Argon', colStart: 18, rowStart: 3, group: 'noble-gas'},
 
@@ -33,10 +34,10 @@ const elements = [
   { symbol: 'Ni', name: 'Nickel', colStart: 10, rowStart: 4, group: 'transition-metal' },
   { symbol: 'Cu', name: 'Copper', colStart: 11, rowStart: 4, group: 'transition-metal' },
   { symbol: 'Zn', name: 'Zinc', colStart: 12, rowStart: 4, group: 'transition-metal' },
-  { symbol: 'Ga', name: 'Gallium', colStart: 13, rowStart: 4 , group: 'metalloid'},
-  { symbol: 'Ge', name: 'Germanium', colStart: 14, rowStart: 4 },
-  { symbol: 'As', name: 'Arsenic', colStart: 15, rowStart: 4 },
-  { symbol: 'Se', name: 'Selenium', colStart: 16, rowStart: 4 },
+  { symbol: 'Ga', name: 'Gallium', colStart: 13, rowStart: 4 ,group: 'post-transition-metal'},
+  { symbol: 'Ge', name: 'Germanium', colStart: 14, rowStart: 4 , group: 'metalloid'},
+  { symbol: 'As', name: 'Arsenic', colStart: 15, rowStart: 4 , group: 'metalloid'},
+  { symbol: 'Se', name: 'Selenium', colStart: 16, rowStart: 4, group: 'nonmetal' },
   { symbol: 'Br', name: 'Bromine', colStart: 17, rowStart: 4 , group: 'halogen'},
   { symbol: 'Kr', name: 'Krypton', colStart: 18, rowStart: 4 , group: 'noble-gas'},
 
@@ -52,10 +53,10 @@ const elements = [
   { symbol: 'Pd', name: 'Palladium', colStart: 10, rowStart: 5 },
   { symbol: 'Ag', name: 'Silver', colStart: 11, rowStart: 5 },
   { symbol: 'Cd', name: 'Cadmium', colStart: 12, rowStart: 5 },
-  { symbol: 'In', name: 'Indium', colStart: 13, rowStart: 5, group: 'metalloid' },
-  { symbol: 'Sn', name: 'Tin', colStart: 14, rowStart: 5 },
-  { symbol: 'Sb', name: 'Antimony', colStart: 15, rowStart: 5 },
-  { symbol: 'Te', name: 'Tellurium', colStart: 16, rowStart: 5 },
+  { symbol: 'In', name: 'Indium', colStart: 13, rowStart: 5, group: 'post-transition-metal' },
+  { symbol: 'Sn', name: 'Tin', colStart: 14, rowStart: 5, group: 'post-transition-metal' },
+  { symbol: 'Sb', name: 'Antimony', colStart: 15, rowStart: 5, group: 'metalloid' },
+  { symbol: 'Te', name: 'Tellurium', colStart: 16, rowStart: 5 , group: 'metalloid'},
   { symbol: 'I', name: 'Iodine', colStart: 17, rowStart: 5 , group: 'halogen'},
   { symbol: 'Xe', name: 'Xenon', colStart: 18, rowStart: 5 , group: 'noble-gas'},
 
@@ -87,10 +88,10 @@ const elements = [
   { symbol: 'Pt', name: 'Platinum', colStart: 10, rowStart: 6 },
   { symbol: 'Au', name: 'Gold', colStart: 11, rowStart: 6 },
   { symbol: 'Hg', name: 'Mercury', colStart: 12, rowStart: 6 },
-  { symbol: 'Tl', name: 'Thallium', colStart: 13, rowStart: 6 , group: 'metalloid'},
-  { symbol: 'Pb', name: 'Lead', colStart: 14, rowStart: 6 },
-  { symbol: 'Bi', name: 'Bismuth', colStart: 15, rowStart: 6 },
-  { symbol: 'Po', name: 'Polonium', colStart: 16, rowStart: 6 },
+  { symbol: 'Tl', name: 'Thallium', colStart: 13, rowStart: 6 , group: 'post-transition-metal'},
+  { symbol: 'Pb', name: 'Lead', colStart: 14, rowStart: 6, group: 'post-transition-metal' },
+  { symbol: 'Bi', name: 'Bismuth', colStart: 15, rowStart: 6,group: 'post-transition-metal' },
+  { symbol: 'Po', name: 'Polonium', colStart: 16, rowStart: 6,group: 'post-transition-metal' },
   { symbol: 'At', name: 'Astatine', colStart: 17, rowStart: 6 , group: 'halogen'},
   { symbol: 'Rn', name: 'Radon', colStart: 18, rowStart: 6 , group: 'noble-gas'},
 
@@ -121,7 +122,7 @@ const elements = [
   { symbol: 'Ds', name: 'Darmstadtium', colStart: 10, rowStart: 7 },
   { symbol: 'Rg', name: 'Roentgenium', colStart: 11, rowStart: 7 },
   { symbol: 'Cn', name: 'Copernicium', colStart: 12, rowStart: 7 },
-  { symbol: 'Nh', name: 'Nihonium', colStart: 13, rowStart: 7 , group: 'metalloid' },
+  { symbol: 'Nh', name: 'Nihonium', colStart: 13, rowStart: 7  },
   { symbol: 'Fl', name: 'Flerovium', colStart: 14, rowStart: 7 },
   { symbol: 'Mc', name: 'Moscovium', colStart: 15, rowStart: 7 },
   { symbol: 'Lv', name: 'Livermorium', colStart: 16, rowStart: 7 },
@@ -139,7 +140,7 @@ const groupColors = {
   'noble-gas': 'bg-purple-200 text-purple-800',
   'lanthanide': 'bg-pink-800 text-pink-200',
   'actinide': 'bg-teal-200 text-teal-800',
-  'post-transition-metal': 'bg-gray-200 text-gray-800',
+  'post-transition-metal': 'bg-gray-800 text-gray-200',
   'unknown': 'bg-gray-100 text-gray-600'
 };
 
