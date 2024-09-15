@@ -21,7 +21,7 @@ export default function ColorComposition() {
   return (
     <div className="absolute top-24 left-1/4 transform -translate-x-1/2 bg-blue-100 border border-blue-500 p-4 rounded-lg shadow-lg z-10 text-xs flex space-x-12">
       {/* First Vertical Table */}
-      <div className="text-center">
+      <div className="text-center text-black">
         {/* Headings */}
         <div className="flex justify-between mb-2 font-semibold">
           <span>Group</span>
@@ -40,7 +40,7 @@ export default function ColorComposition() {
       <div className="border-l border-gray-300"></div>
 
       {/* Second Vertical Table */}
-      <div className="text-center">
+      <div className="text-center text-black">
         {/* Headings */}
         <div className="flex justify-between mb-2 font-semibold">
           <span>Group</span>
